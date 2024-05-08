@@ -7,5 +7,6 @@ mod variables;
 fn main() {
     println!("Hello, world!");
 
-    functions::entry_point();
+    // variables::entry_point();
+    // functions::entry_point();
 }
