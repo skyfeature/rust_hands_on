@@ -26,6 +26,23 @@ fn branching() {
 }
 
 
+fn checking_value() {
+    let x = 3;
+    if x > 0 {
+        println!("x is {x}");
+    }
+    else {
+        println!("x is unexpectedly low: {x}");
+    }
+
+    let y = "ABC";
+    let z = String::from(y);
+
+    let var = if x > 0 { 5 } else { 6 };
+    // let var = if x > 0 { 5 } else { "six" };
+}
+
+
 fn checking_loop() {
     let mut count = 0u32;
     println!("count is {count}");
@@ -105,11 +122,41 @@ fn fizz_buzz() {
     }
 }
 
+fn for_loop() {
+    let a = [1, 2, 3, 5, 3, 6, 2];
+
+    for elem in a {
+        println!("Elem is: {elem}");
+    }
+
+    for num in 1..=10 {
+        println!("Number is: {num}");
+    }
+
+    for rev_num in (1..=10).rev() {
+        println!("Reverse number is: {}", rev_num);
+    }
+}
+
+
+fn fibonacci(n: u32) -> u32 {
+    if n <= 2 {
+        n
+    }
+    else {
+        fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+
+
 pub fn entry_point() {
     branching();
+    checking_value();
     checking_loop();
     check_nested_loops();
     loop_return();
     fizz_buzz();
+    for_loop();
 
+    println!("fibonacci of 10: {}", fibonacci(10));
 }
