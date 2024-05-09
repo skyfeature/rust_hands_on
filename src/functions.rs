@@ -1,3 +1,5 @@
+#![allow(dead_code, unused_variables, unused_assignments)]
+
 
 fn always_return_type() -> i32 {
     5

@@ -2,6 +2,8 @@
 
 mod functions;
 mod variables;
+mod branching;
+mod guessing_game;
 
 
 fn main() {
@@ -9,4 +11,6 @@ fn main() {
 
     // variables::entry_point();
     // functions::entry_point();
+    // branching::entry_point();
+    // guessing_game::entry_point();
 }
