@@ -4,7 +4,7 @@ mod functions;
 mod variables;
 mod branching;
 mod guessing_game;
-
+mod structs;
 
 fn main() {
     println!("Hello, world!");
@@ -13,4 +13,5 @@ fn main() {
     // functions::entry_point();
     // branching::entry_point();
     // guessing_game::entry_point();
+    // structs::entry_point();
 }
