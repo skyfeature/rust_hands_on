@@ -7,6 +7,7 @@ mod guessing_game;
 mod structs;
 mod ownership;
 mod borrowing;
+mod slicing;
 
 fn main() {
     println!("Hello, world!");
@@ -17,5 +18,6 @@ fn main() {
     // guessing_game::entry_point();
     // structs::entry_point();
     // ownership::entry_point();
-    borrowing::entry_point();
+    // borrowing::entry_point();
+    slicing::entry_point();
 }
