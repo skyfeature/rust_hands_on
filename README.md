@@ -19,3 +19,8 @@
 * If we do want to deeply copy the heap data of the String, not just the stack data, we can use a common method called clone.
 * Types such as integers, &str that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make.
 * drop is used to free the memory.
+
+
+#### Rules of References
+* At any given time, you can have either one mutable reference or any number of immutable references.
+* References must always be valid.
