@@ -8,6 +8,7 @@ mod structs;
 mod ownership;
 mod borrowing;
 mod slicing;
+mod vectors;
 
 fn main() {
     println!("Hello, world!");
@@ -19,5 +20,6 @@ fn main() {
     // structs::entry_point();
     // ownership::entry_point();
     // borrowing::entry_point();
-    slicing::entry_point();
+    // slicing::entry_point();
+    vectors::entry_point();
 }
