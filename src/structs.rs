@@ -85,6 +85,33 @@ fn unit_tuple_struct() {
 
 }
 
+#[derive(Debug)]
+struct Identity {
+    email: String,
+    age: u32,
+}
+
+fn create_user(email_id: String, age_num: u32) -> Identity {
+    let user = Identity{
+        email: email_id,
+        age: age_num,
+    };
+
+    // println!("{}, {}", email_id, age_num);  // fails since email_id has already been moved.
+
+    user
+}
+
+fn test_move() {
+    let email = String::from("abc@gmail.com");
+
+    let user1 = create_user(email, 20);
+    println!("{:?}", user1);
+}
+
+
+
+
 pub fn entry_point() {
 
     checking_tuple();
@@ -99,5 +126,8 @@ pub fn entry_point() {
     ram.name = String::from("Tejas");
 
     println!("{:?}", ram);
+
+
+    test_move();
     
 }

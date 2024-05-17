@@ -9,6 +9,8 @@ mod ownership;
 mod borrowing;
 mod slicing;
 mod vectors;
+mod crashes;
+mod rectangles;
 
 fn main() {
     println!("Hello, world!");
@@ -21,5 +23,7 @@ fn main() {
     // ownership::entry_point();
     // borrowing::entry_point();
     // slicing::entry_point();
-    vectors::entry_point();
+    // vectors::entry_point();
+    // crashes::entry_point();
+    // rectangles::entry_point();
 }
