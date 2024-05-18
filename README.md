@@ -24,3 +24,11 @@
 #### Rules of References
 * At any given time, you can have either one mutable reference or any number of immutable references.
 * References must always be valid.
+
+#### Strings
+* Strings are a wrapper over Vec<u8>
+* Internally it's bytes but also chars
+* Each chars could be 1 byte or more
+* So direct String indexing is not valid
+* Be explicit using .bytes() and .chars() functions and then you can iterate.
+* String slicing works only if char boundary is specified.

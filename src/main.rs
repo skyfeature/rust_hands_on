@@ -12,6 +12,7 @@ mod vectors;
 mod crashes;
 mod rectangles;
 mod enums;
+mod strings;
 
 fn main() {
     println!("Hello, world!");
@@ -27,5 +28,6 @@ fn main() {
     // vectors::entry_point();
     // crashes::entry_point();
     // rectangles::entry_point();
-    enums::entry_point();
+    // enums::entry_point();
+    strings::entry_point();
 }
