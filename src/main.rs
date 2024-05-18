@@ -11,6 +11,7 @@ mod slicing;
 mod vectors;
 mod crashes;
 mod rectangles;
+mod enums;
 
 fn main() {
     println!("Hello, world!");
@@ -26,4 +27,5 @@ fn main() {
     // vectors::entry_point();
     // crashes::entry_point();
     // rectangles::entry_point();
+    enums::entry_point();
 }
