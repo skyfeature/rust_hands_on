@@ -1,5 +1,7 @@
 #![allow(unused_imports)]
 
+use crate::exercises::get_median_mode;
+
 mod functions;
 mod variables;
 mod branching;
@@ -13,6 +15,10 @@ mod crashes;
 mod rectangles;
 mod enums;
 mod strings;
+mod hashmaps;
+mod exercises;
+mod closures;
+mod oops;
 
 fn main() {
     println!("Hello, world!");
@@ -20,14 +26,19 @@ fn main() {
     // variables::entry_point();
     // functions::entry_point();
     // branching::entry_point();
-    // guessing_game::entry_point();
+    guessing_game::entry_point();
     // structs::entry_point();
     // ownership::entry_point();
     // borrowing::entry_point();
     // slicing::entry_point();
     // vectors::entry_point();
-    // crashes::entry_point();
+    crashes::entry_point();
     // rectangles::entry_point();
     // enums::entry_point();
-    strings::entry_point();
+    // strings::entry_point();
+    // hashmaps::entry_point();
+
+    // get_median_mode::entry_point();
+    // closures::entry_point();
+    oops::entry_point();
 }

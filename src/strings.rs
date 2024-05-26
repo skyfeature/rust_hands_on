@@ -1,4 +1,4 @@
-#![allow(unused_mut, unused_variables)]
+#![allow(unused_mut, unused_variables, dead_code)]
 
 
 fn string_creation() {
