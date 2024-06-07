@@ -145,6 +145,34 @@ enum MyOption<T> {
     None,
 }
 
+fn closure_returning_vector() {
+    let res = Option::Some(vec![1, 2, 3]);
+    res.unwrap_or_else(||Vec::new());  // the closure inside unwrap_or_else must return same type as T from Some(T)
+}
+
+#[derive(Debug)]
+struct Rectangle {
+    width: i32,
+    height: i32,
+}
+
+fn sort_user_defined_struct() {
+    let mut list = vec![
+        Rectangle{ width: 12, height: 14 },
+        Rectangle{ width: 8, height: 10 },
+        Rectangle{ width: 9, height: 11 },
+    ];
+
+    let mut count_sort_operations = 0;
+    list.sort_by_key(|r| {
+        count_sort_operations += 1;
+        r.width
+    }); // sort_by_key is useful when the key type have a well defined order
+
+    println!("{:?}", list);
+    println!("{}", count_sort_operations);
+}
+
 
 pub fn entry_point() {
     main_fun();
@@ -157,4 +185,8 @@ pub fn entry_point() {
     mutable_capture();
 
     moving_capture();
+
+    closure_returning_vector();
+
+    sort_user_defined_struct();
 }

@@ -1,4 +1,4 @@
-
+#![allow(dead_code)]
 
 pub struct AveragedCollection {
     list: Vec<i32>,
@@ -32,5 +32,20 @@ impl AveragedCollection {
 
 
 pub fn entry_point() {
+    let mut collect = AveragedCollection {
+        list: Vec::new(),
+        avg: 0.0,
+    };
 
+    collect.add(2);
+    collect.add(3);
+    collect.add(4);
+
+    println!("Avg is: {}", collect.average());
+
+    collect.add(5);
+    println!("Avg is: {}", collect.average());
+
+    collect.remove();
+    println!("Avg is: {}", collect.average());
 }
