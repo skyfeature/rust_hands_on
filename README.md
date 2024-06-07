@@ -166,3 +166,15 @@
 * Self is the type
 * self is take ownership inside the method. The object is destroyed after method call
 * &self/&mut self is borrow immutably/mutably. The object stays after method call
+
+#### Iterators
+* Perform some task on a sequence of items
+* Iterators in Rust are lazy. They don't do anything unless consumed.
+* arr.iter() to iterate over items by reference, gives immutable reference for each item.
+* arr.iter_mut() to iterate over items by reference, gives mutable reference for each item.
+* arr.into_iter() to get owning iterator. arr is destroyed after the iteration.
+
+* make the iterator variable mutable if next() is going to be called.
+* Type returned from iter().next() is Some(&T)
+* Iterator adaptor can help perform some operation on the iterator without consuming it
+

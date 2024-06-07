@@ -29,3 +29,29 @@ fn test_main() {
     assert_eq!(stdout, "Hello, world!\n");
 
 }
+
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn iterator_demonstration() {
+        let v1 = vec![2, 4, 9];
+        
+        let mut v1_iter = v1.iter();
+
+        assert_eq!(v1_iter.next(), Some(&2));
+        assert_eq!(v1_iter.next(), Some(&4));
+        assert_eq!(v1_iter.next(), Some(&9));
+    }
+
+    #[test]
+    fn iterator_sum() {
+        let v1 = vec![1, 2, 3];
+
+        let v1_iter = v1.iter();
+
+        let total: i32 = v1_iter.sum();
+
+        assert_eq!(total, 6);
+    }
+}
