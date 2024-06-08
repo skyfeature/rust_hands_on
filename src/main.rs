@@ -25,6 +25,7 @@ mod references;
 mod traits;
 mod lifetimes;
 mod my_iterators;
+mod matches;
 
 fn main() {
     println!("Hello, world!");
@@ -57,4 +58,6 @@ fn main() {
     // great_string::entry_point();
 
     my_iterators::entry_point();
+
+    matches::entry_point();
 }
