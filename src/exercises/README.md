@@ -45,5 +45,6 @@
 * if can be put before => but after the case value: a if condition(1) => Some(5),
 * use _ to match remaining.
 * match arms must have same type
-* type of return statement is ()
+* type of a return statement is ()
+* match guard
 * The match arm with guard won't be taken into account, when (the compiler) checking if all patterns have been covered.

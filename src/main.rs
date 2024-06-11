@@ -26,6 +26,7 @@ mod traits;
 mod lifetimes;
 mod my_iterators;
 mod matches;
+mod smart_pointers;
 
 fn main() {
     println!("Hello, world!");
@@ -57,7 +58,9 @@ fn main() {
 
     // great_string::entry_point();
 
-    my_iterators::entry_point();
+    // my_iterators::entry_point();
 
-    matches::entry_point();
+    // matches::entry_point();
+
+    smart_pointers::entry_point();
 }

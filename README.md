@@ -173,8 +173,25 @@
 * arr.iter() to iterate over items by reference, gives immutable reference for each item.
 * arr.iter_mut() to iterate over items by reference, gives mutable reference for each item.
 * arr.into_iter() to get owning iterator. arr is destroyed after the iteration.
-
 * make the iterator variable mutable if next() is going to be called.
 * Type returned from iter().next() is Some(&T)
 * Iterator adaptor can help perform some operation on the iterator without consuming it
+
+#### Smart pointers
+* String and Vec<T> are smart pointers too.
+* Smart pointers are implemented using Struct.
+* Smart pointers implement Deref and Drop traits.
+* Deref allows the smart pointer instance to behave as a reference.
+* Drop allows you to modify what happens when the instance of smart pointer goes out of scope.
+* Box<T> for allocating values on Heap
+* Rc<T>, a reference counting which allows multiple ownership
+
+#### Box
+* Unique pointer
+* Data allocated on heap, but the Box variable itself is on Stack.
+* Underlying variable can be printed directly.
+* Used mainly in these 3 cases:
+* * You don't know the size of the object you need to store beforehand
+* * You want to avoid copy of the underlying data but pass it around
+* * You plan to replace a trait by different struct types depending upon context
 
