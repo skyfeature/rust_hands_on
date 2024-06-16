@@ -34,9 +34,27 @@ fn smart_pointer_dereference() {
 
 struct MyBox<T> (T);
 
+
+fn nullable_pointer() {
+    fn check_optional(input: Option<Box<i32>>) {
+        match input {
+            None => println!("THere was nothing."),
+            Some(bx) => println!("Found: {}", bx),
+        }
+    }
+
+    let optional = None;
+    check_optional(optional);
+
+    let non_optional = Some(Box::new(9000));
+    check_optional(non_optional);
+}
+
 pub fn entry_point() {
     box_intro();
 
     normal_dereference();
     smart_pointer_dereference();
+
+    nullable_pointer();
 }

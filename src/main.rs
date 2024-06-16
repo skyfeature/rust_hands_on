@@ -2,6 +2,8 @@
 
 use crate::exercises::get_median_mode;
 use crate::exercises::great_string;
+use crate::exercises::merge_two_sorted_lists;
+use crate::exercises::btreeset_usage;
 
 mod functions;
 mod variables;
@@ -27,6 +29,7 @@ mod lifetimes;
 mod my_iterators;
 mod matches;
 mod smart_pointers;
+mod my_options;
 
 fn main() {
     println!("Hello, world!");
@@ -62,5 +65,8 @@ fn main() {
 
     // matches::entry_point();
 
-    smart_pointers::entry_point();
+    // smart_pointers::entry_point();
+    my_options::entry_point();
+
+    btreeset_usage::entry_point();
 }

@@ -121,6 +121,17 @@ fn fibo_dp() {
     println!("{:?}", dp);
 }
 
+fn vec_of_string_mutate() {
+    let mut names = vec!["Japan".to_string(), "Korea".to_string(), "America".to_string()];
+
+    let japan = &mut names[0];
+
+    *japan = "Osaka".to_string();
+
+    println!("{:?}", names);
+
+}
+
 
 pub fn entry_point() {
     declare_vec();
@@ -134,4 +145,6 @@ pub fn entry_point() {
     enum_vec();
 
     fibo_dp();
+
+    vec_of_string_mutate();
 }

@@ -48,6 +48,17 @@ fn iterator_adaptor_collect() {
     println!("{:?} vs {:?}", v1, v2);
 }
 
+fn iterator_collect() {
+    let arr = ["Gulab".to_string(), "Pulav".to_string() , "Guns".to_string(), "Puns".to_string()];
+
+    let varr = arr.iter().map(|x| x.to_owned()+x).collect::<Vec<_>>(); // turbofish
+    let varr: Vec<_> = arr.iter().map(|x| x.to_owned()+x).collect(); // equivalent to this
+    // in both cases, compiler can figure out the Vector type.
+
+    println!("{:?}", arr);
+    println!("{:?}", varr);
+}
+
 
 #[derive(PartialEq, Debug)]
 struct Shoe {
@@ -105,6 +116,8 @@ pub fn entry_point() {
     iterator_adaptor();
 
     iterator_adaptor_collect();
+
+    iterator_collect();
 
     iterator_adaptor_capture_env();
 }

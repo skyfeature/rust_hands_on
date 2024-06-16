@@ -117,7 +117,7 @@
 
 #### ?
 * Return early from the Result or Option.
-* Returns when `Err(error)` or `None` is received.
+* Returns when `Err(error)` or `None` is received, and returns the same to output.
 
 #### Object Oriented Programming
 * Rust has structs and methods and objects
@@ -177,6 +177,11 @@
 * Type returned from iter().next() is Some(&T)
 * Iterator adaptor can help perform some operation on the iterator without consuming it
 
+#### Pointer
+* Rust pointer type always points to some valid location, it is never null
+* In the same way references are never null.
+* To get a null pointer, wrap the pointer in `Option<PT>`
+
 #### Smart pointers
 * String and Vec<T> are smart pointers too.
 * Smart pointers are implemented using Struct.
@@ -195,3 +200,4 @@
 * * You want to avoid copy of the underlying data but pass it around
 * * You plan to replace a trait by different struct types depending upon context
 
+* Nullable Box pointer: `Option<Box<T>>`
